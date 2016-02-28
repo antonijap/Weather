@@ -8,15 +8,20 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 import Alamofire
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: Outlets
     
+    @IBOutlet weak var weatherImg: UIImageView!
+    @IBOutlet weak var weatherDescShort: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
-
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var pressureLabel: UILabel!
+    @IBOutlet weak var windLabel: UILabel!
     
     // MARK: Properties
     
@@ -26,10 +31,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var weather: Weather!
     var name: String!
     
+    // MARK: viewDidLoad
     
-    // MARK: Methods & Actions
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationAuthStatus()
+        }
+
+    }
     
-    // Getting name of the city from location
+    // MARK: Methods
+    
     func getCityName() {
         print("I'm in getCityName()")
         CLGeocoder().reverseGeocodeLocation(currentLocation) { (placemark: [CLPlacemark]?, err: NSError?) -> Void in
@@ -44,6 +63,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 
                 self.name = self.currentCity.stringByReplacingOccurrencesOfString("City of ", withString: "")
                 let finalCityName = self.name.lowercaseString
+                print(finalCityName)
                 self.name = finalCityName
                 
                 self.weather = Weather(location: "\(self.name)")
@@ -59,8 +79,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func updateUI() {
         print("I'm inside of updateUI")
-        cityLabel.text = name.capitalizedString
-        temperatureLabel.text = weather.temperature
+        cityLabel.text = currentCity.capitalizedString
+        temperatureLabel.text = "\(weather.temperature)°"
+        weatherDescShort.text = weather.descShort
+        weatherImg.image = UIImage(named: weather.weatherImgName)
+        humidityLabel.text = "\(weather.humidity)%"
+        windLabel.text = "\(weather.wind) km/h"
+        pressureLabel.text = "\(weather.pressure) mb"
     }
     
     // Getting user location
@@ -73,26 +98,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .AuthorizedWhenInUse {
+            locationManager.requestLocation()
+        }
+    }
+    
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Failed to find user's location: \(error.localizedDescription)")
     }
     
-    // Check if the user allowed authorization
     func locationAuthStatus() {
         print("I'm in locationAuthStatus()")
-        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse || CLLocationManager.authorizationStatus() == .AuthorizedAlways {
-            locationManager.requestLocation()
+        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+            print("Will req location")
+            locationManager.stopUpdatingLocation()
         } else {
             locationManager.requestWhenInUseAuthorization()
         }
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        locationManager.delegate = self
-        temperatureLabel.text = "0"
-        cityLabel.text = "Updating..."
-        locationAuthStatus()
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
-}
 
+}

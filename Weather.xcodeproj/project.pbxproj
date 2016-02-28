@@ -43,6 +43,14 @@
 		302019F6B422103C042A3406 /* Pods-WeatherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherTests/Pods-WeatherTests.release.xcconfig"; sourceTree = "<group>"; };
 		386687845F3212A914168D01 /* Pods_WeatherUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6834D3471C8329C400A7D3E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6834D3491C838D2E00A7D3E5 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		6834D34A1C838D2E00A7D3E5 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		6834D34B1C838D2E00A7D3E5 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		6834D34C1C838D2E00A7D3E5 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
+		6834D34D1C838D2E00A7D3E5 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		6834D34E1C838D2E00A7D3E5 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		6834D34F1C838D2E00A7D3E5 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		6834D3501C838D2E00A7D3E5 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		6840967F1C830638000312B5 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		684096821C830638000312B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		684096841C830638000312B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +210,14 @@
 		684096B51C830667000312B5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6834D3491C838D2E00A7D3E5 /* Nunito-Black.ttf */,
+				6834D34A1C838D2E00A7D3E5 /* Nunito-Bold.ttf */,
+				6834D34B1C838D2E00A7D3E5 /* Nunito-ExtraBold.ttf */,
+				6834D34C1C838D2E00A7D3E5 /* Nunito-ExtraLight.ttf */,
+				6834D34D1C838D2E00A7D3E5 /* Nunito-Light.ttf */,
+				6834D34E1C838D2E00A7D3E5 /* Nunito-Medium.ttf */,
+				6834D34F1C838D2E00A7D3E5 /* Nunito-Regular.ttf */,
+				6834D3501C838D2E00A7D3E5 /* Nunito-SemiBold.ttf */,
 				6834D3471C8329C400A7D3E5 /* Constants.swift */,
 			);
 			name = Assets;

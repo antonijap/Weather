@@ -3,7 +3,25 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+            <string>Nunito-Bold</string>
+            <string>Nunito-Bold</string>
+        </mutableArray>
+        <mutableArray key="Nunito-ExtraLight.ttf">
+            <string>Nunito-ExtraLight</string>
+        </mutableArray>
+        <mutableArray key="Nunito-Light.ttf">
+            <string>Nunito-Light</string>
+            <string>Nunito-Light</string>
+            <string>Nunito-Light</string>
+            <string>Nunito-Light</string>
+            <string>Nunito-Light</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -17,51 +35,368 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="kzG-rg-Ivw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="kzG-rg-Ivw" userLabel="bg">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvB-cf-wvx">
-                                <rect key="frame" x="182" y="405" width="237" height="122"/>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zO-Un-G05">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="73"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="122" id="QsK-y7-YDG"/>
-                                    <constraint firstAttribute="width" constant="237" id="Rdx-TI-CJz"/>
+                                    <constraint firstAttribute="height" constant="73" id="WxM-oG-Gwc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="117"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RY6-qH-d1e">
-                                <rect key="frame" x="97" y="352" width="387" height="21"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZAGREB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RY6-qH-d1e">
+                                <rect key="frame" x="107" y="28" width="387" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EdZ-6U-OH3"/>
                                     <constraint firstAttribute="height" constant="21" id="Hp3-sB-hxS"/>
                                     <constraint firstAttribute="width" constant="387" id="gCl-ip-33M"/>
+                                    <constraint firstAttribute="height" constant="30" id="grH-zi-Oal"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Nunito-ExtraLight" family="Nunito" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EdZ-6U-OH3"/>
+                                        <exclude reference="Hp3-sB-hxS"/>
+                                        <exclude reference="gCl-ip-33M"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="-3" y="552" width="387" height="21"/>
+                                </variation>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="AGe-tD-f3c" userLabel="Main Stack">
+                                <rect key="frame" x="40" y="109" width="540" height="216"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VDx-CG-0Xc" userLabel="Top Stack">
+                                        <rect key="frame" x="0.0" y="0.0" width="540" height="79"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u5C-fq-Ykd">
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="79"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="181" id="J7T-4F-imT"/>
+                                                    <constraint firstAttribute="width" constant="300" id="K1F-8Y-Nm1"/>
+                                                    <constraint firstAttribute="width" constant="100" id="SgZ-nF-xEq"/>
+                                                    <constraint firstAttribute="height" constant="251" id="TNo-os-oB6"/>
+                                                    <constraint firstAttribute="width" constant="347" id="XSF-qM-J6l"/>
+                                                    <constraint firstAttribute="height" constant="251" id="bxf-XY-sSS"/>
+                                                    <constraint firstAttribute="height" constant="152" id="cn8-es-Pbi"/>
+                                                    <constraint firstAttribute="height" constant="273" id="sje-m6-xRW"/>
+                                                    <constraint firstAttribute="height" constant="251" id="wij-9C-PUO"/>
+                                                    <constraint firstAttribute="height" constant="512" id="zQp-uw-Nvg"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="J7T-4F-imT"/>
+                                                        <exclude reference="K1F-8Y-Nm1"/>
+                                                        <exclude reference="SgZ-nF-xEq"/>
+                                                        <exclude reference="TNo-os-oB6"/>
+                                                        <exclude reference="XSF-qM-J6l"/>
+                                                        <exclude reference="bxf-XY-sSS"/>
+                                                        <exclude reference="cn8-es-Pbi"/>
+                                                        <exclude reference="sje-m6-xRW"/>
+                                                        <exclude reference="wij-9C-PUO"/>
+                                                        <exclude reference="zQp-uw-Nvg"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="SgZ-nF-xEq"/>
+                                                        <exclude reference="sje-m6-xRW"/>
+                                                        <exclude reference="zQp-uw-Nvg"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvB-cf-wvx">
+                                                <rect key="frame" x="285" y="0.0" width="255" height="79"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="122" id="MUD-YY-Acb"/>
+                                                    <constraint firstAttribute="height" constant="122" id="QsK-y7-YDG"/>
+                                                    <constraint firstAttribute="width" constant="237" id="Rdx-TI-CJz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="117"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="MUD-YY-Acb"/>
+                                                        <exclude reference="QsK-y7-YDG"/>
+                                                        <exclude reference="Rdx-TI-CJz"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="QsK-y7-YDG"/>
+                                                        <exclude reference="Rdx-TI-CJz"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="RYD-8J-e2k"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MaR-6f-xwn" userLabel="Weather Short Desc">
+                                        <rect key="frame" x="0.0" y="109" width="540" height="19"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-rx-Z5W">
+                                                <rect key="frame" x="0.0" y="0.0" width="540" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="DHe-uz-fKC"/>
+                                                    <constraint firstAttribute="width" constant="436" id="EYU-aC-KCj"/>
+                                                    <constraint firstAttribute="width" constant="436" id="aRg-Vl-hIV"/>
+                                                    <constraint firstAttribute="height" constant="21" id="hxV-EV-WRW"/>
+                                                    <constraint firstAttribute="height" constant="19" id="l8h-XS-SXf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="15"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="DHe-uz-fKC"/>
+                                                        <exclude reference="EYU-aC-KCj"/>
+                                                        <exclude reference="aRg-Vl-hIV"/>
+                                                        <exclude reference="hxV-EV-WRW"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="DHe-uz-fKC"/>
+                                                        <exclude reference="aRg-Vl-hIV"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ar0-18-mNt" userLabel="Bottom Stack">
+                                        <rect key="frame" x="0.0" y="158" width="540" height="58"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AjU-1l-pwD">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="58"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HUMIDITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="tEI-8O-RYU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="17"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="436" id="OuP-h0-3r8"/>
+                                                            <constraint firstAttribute="height" constant="21" id="RSR-Aa-w0P"/>
+                                                            <constraint firstAttribute="height" constant="17" id="Tvj-uh-NEf"/>
+                                                            <constraint firstAttribute="width" constant="436" id="vMJ-dE-QLl"/>
+                                                            <constraint firstAttribute="height" constant="21" id="zyz-tT-gU7"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="11"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="OuP-h0-3r8"/>
+                                                                <exclude reference="RSR-Aa-w0P"/>
+                                                                <exclude reference="vMJ-dE-QLl"/>
+                                                                <exclude reference="zyz-tT-gU7"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <mask key="constraints">
+                                                                <exclude reference="vMJ-dE-QLl"/>
+                                                                <exclude reference="zyz-tT-gU7"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea6-9v-T5r">
+                                                        <rect key="frame" x="0.0" y="25" width="170" height="33"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="8Gp-BZ-r0S"/>
+                                                            <constraint firstAttribute="height" constant="21" id="B8G-2X-lyJ"/>
+                                                            <constraint firstAttribute="width" constant="436" id="PCS-dB-QGq"/>
+                                                            <constraint firstAttribute="width" constant="436" id="d3z-gb-tvW"/>
+                                                            <constraint firstAttribute="height" constant="33" id="zGN-tl-VLO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="8Gp-BZ-r0S"/>
+                                                                <exclude reference="B8G-2X-lyJ"/>
+                                                                <exclude reference="PCS-dB-QGq"/>
+                                                                <exclude reference="d3z-gb-tvW"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <mask key="constraints">
+                                                                <exclude reference="B8G-2X-lyJ"/>
+                                                                <exclude reference="d3z-gb-tvW"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bZR-wF-xlW">
+                                                <rect key="frame" x="185" y="0.0" width="170" height="58"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIND" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="hVl-77-QI2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="17"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="17" id="T7B-lb-11U"/>
+                                                            <constraint firstAttribute="height" constant="21" id="UHM-tP-z2i"/>
+                                                            <constraint firstAttribute="width" constant="436" id="du1-pQ-rWc"/>
+                                                            <constraint firstAttribute="height" constant="21" id="nNf-yY-3zo"/>
+                                                            <constraint firstAttribute="width" constant="436" id="nad-Mr-eaa"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="11"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="UHM-tP-z2i"/>
+                                                                <exclude reference="du1-pQ-rWc"/>
+                                                                <exclude reference="nNf-yY-3zo"/>
+                                                                <exclude reference="nad-Mr-eaa"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <mask key="constraints">
+                                                                <exclude reference="nNf-yY-3zo"/>
+                                                                <exclude reference="nad-Mr-eaa"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5KM/H" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dei-aS-0xE">
+                                                        <rect key="frame" x="0.0" y="25" width="170" height="33"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="436" id="79q-VK-DBl"/>
+                                                            <constraint firstAttribute="height" constant="21" id="I6s-gk-1VM"/>
+                                                            <constraint firstAttribute="height" constant="33" id="gEi-lN-cUv"/>
+                                                            <constraint firstAttribute="width" constant="436" id="rWL-0C-yyY"/>
+                                                            <constraint firstAttribute="height" constant="21" id="sTV-WB-mRN"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="79q-VK-DBl"/>
+                                                                <exclude reference="I6s-gk-1VM"/>
+                                                                <exclude reference="rWL-0C-yyY"/>
+                                                                <exclude reference="sTV-WB-mRN"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <mask key="constraints">
+                                                                <exclude reference="79q-VK-DBl"/>
+                                                                <exclude reference="sTV-WB-mRN"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OQG-zh-wMS">
+                                                <rect key="frame" x="370" y="0.0" width="170" height="58"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESSURE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="21i-lQ-65x">
+                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="17"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="436" id="4R6-2C-Nzi"/>
+                                                            <constraint firstAttribute="height" constant="21" id="5a3-0o-KbI"/>
+                                                            <constraint firstAttribute="width" constant="436" id="6Tu-hc-zGd"/>
+                                                            <constraint firstAttribute="height" constant="17" id="Dwj-yj-xbE"/>
+                                                            <constraint firstAttribute="height" constant="21" id="xoN-H9-tMZ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="11"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="4R6-2C-Nzi"/>
+                                                                <exclude reference="5a3-0o-KbI"/>
+                                                                <exclude reference="6Tu-hc-zGd"/>
+                                                                <exclude reference="xoN-H9-tMZ"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <mask key="constraints">
+                                                                <exclude reference="5a3-0o-KbI"/>
+                                                                <exclude reference="6Tu-hc-zGd"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TS7-cY-XFh">
+                                                        <rect key="frame" x="0.0" y="25" width="170" height="33"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33" id="16r-It-lyV"/>
+                                                            <constraint firstAttribute="height" constant="21" id="2so-VU-S0r"/>
+                                                            <constraint firstAttribute="height" constant="21" id="3rJ-fV-HOO"/>
+                                                            <constraint firstAttribute="width" constant="436" id="4f5-VX-BNt"/>
+                                                            <constraint firstAttribute="width" constant="436" id="Kic-9w-faR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="2so-VU-S0r"/>
+                                                                <exclude reference="3rJ-fV-HOO"/>
+                                                                <exclude reference="4f5-VX-BNt"/>
+                                                                <exclude reference="Kic-9w-faR"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <mask key="constraints">
+                                                                <exclude reference="3rJ-fV-HOO"/>
+                                                                <exclude reference="Kic-9w-faR"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YvB-cf-wvx" secondAttribute="bottom" constant="73" id="IlV-ga-iRC"/>
-                            <constraint firstItem="YvB-cf-wvx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JyB-KP-UfQ"/>
-                            <constraint firstItem="RY6-qH-d1e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OA3-zG-jhE"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kzG-rg-Ivw" secondAttribute="bottom" id="Ol6-MI-aW2"/>
-                            <constraint firstAttribute="trailing" secondItem="kzG-rg-Ivw" secondAttribute="trailing" id="W2I-Kc-aeQ"/>
-                            <constraint firstItem="kzG-rg-Ivw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iZ0-Mi-XrF"/>
-                            <constraint firstItem="kzG-rg-Ivw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qCj-GC-Ik3"/>
-                            <constraint firstItem="YvB-cf-wvx" firstAttribute="top" secondItem="RY6-qH-d1e" secondAttribute="bottom" constant="32" id="sTf-j6-2dv"/>
+                            <constraint firstAttribute="trailing" secondItem="4zO-Un-G05" secondAttribute="trailing" id="3hQ-xH-n7T"/>
+                            <constraint firstItem="AGe-tD-f3c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="COD-d7-XX9"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="AGe-tD-f3c" secondAttribute="bottom" id="IJh-Xp-uRt"/>
+                            <constraint firstItem="4zO-Un-G05" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="McA-7Z-mke"/>
+                            <constraint firstItem="RY6-qH-d1e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-9.5" id="OA3-zG-jhE"/>
+                            <constraint firstItem="4zO-Un-G05" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PYD-93-OY2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RY6-qH-d1e" secondAttribute="trailing" constant="77" id="Pcb-dZ-d3O"/>
+                            <constraint firstItem="RY6-qH-d1e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="QXn-7y-IKO"/>
+                            <constraint firstItem="RY6-qH-d1e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="Rmq-hW-dnr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AGe-tD-f3c" secondAttribute="trailing" constant="10" id="jLk-6u-fVG"/>
+                            <constraint firstItem="AGe-tD-f3c" firstAttribute="top" secondItem="RY6-qH-d1e" secondAttribute="bottom" constant="51" id="ob2-R9-B12"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RY6-qH-d1e" secondAttribute="trailing" constant="86" id="qBu-dB-eR8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AGe-tD-f3c" secondAttribute="bottom" constant="130" id="si5-SO-zte"/>
+                            <constraint firstItem="RY6-qH-d1e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="87" id="w6o-AI-rkP"/>
+                            <constraint firstItem="AGe-tD-f3c" firstAttribute="top" secondItem="RY6-qH-d1e" secondAttribute="bottom" constant="30" id="yhw-aa-D7q"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OA3-zG-jhE"/>
+                                <exclude reference="Pcb-dZ-d3O"/>
+                                <exclude reference="Rmq-hW-dnr"/>
+                                <exclude reference="IJh-Xp-uRt"/>
+                                <exclude reference="yhw-aa-D7q"/>
+                                <exclude reference="si5-SO-zte"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="cityLabel" destination="RY6-qH-d1e" id="gUq-xt-ilQ"/>
+                        <outlet property="humidityLabel" destination="ea6-9v-T5r" id="Eo8-kW-9H1"/>
+                        <outlet property="pressureLabel" destination="TS7-cY-XFh" id="Bbd-yM-a5P"/>
                         <outlet property="temperatureLabel" destination="YvB-cf-wvx" id="Apy-8D-dnI"/>
+                        <outlet property="weatherDescShort" destination="XbB-rx-Z5W" id="JdX-yW-LzT"/>
+                        <outlet property="weatherImg" destination="u5C-fq-Ykd" id="xv9-yy-6KQ"/>
+                        <outlet property="windLabel" destination="Dei-aS-0xE" id="Qpj-ky-J2Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="429"/>
+            <point key="canvasLocation" x="303" y="453"/>
         </scene>
     </scenes>
     <resources>

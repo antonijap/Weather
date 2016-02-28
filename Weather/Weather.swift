@@ -13,7 +13,13 @@ class Weather {
     
     private var _city: String!
     private var _temperature: String!
+    private var _descShort: String!
+    private var _humidity: String!
+    private var _pressure: String!
+    private var _wind: String!
     private var _weatherURL: String!
+    
+    var weatherImgName: String!
     
     var city: String {
         return _city
@@ -25,6 +31,22 @@ class Weather {
     
     var weatherURL: String {
         return _weatherURL
+    }
+    
+    var humidity: String {
+        return _humidity
+    }
+    
+    var wind: String {
+        return _wind
+    }
+    
+    var pressure: String {
+        return _pressure
+    }
+    
+    var descShort: String {
+        return _descShort
     }
     
     init(location: String) {
@@ -47,6 +69,40 @@ class Weather {
                     if let tmp = main["temp"] as? Int {
                         self._temperature = "\(tmp)"
                     }
+                    
+                    if let humidity = main["humidity"] as? Int {
+                        self._humidity = "\(humidity)"
+                    }
+                    
+                    if let pressure = main["pressure"] as? Int {
+                        self._pressure = "\(pressure)"
+                    }
+  
+                }
+                
+                if let main = dict["wind"] as? Dictionary<String, AnyObject> {
+                    if let wind = main["speed"] as? Int {
+                        self._wind = "\(wind)"
+                    }
+                }
+                
+                if let desc = dict["weather"] as? [Dictionary<String, AnyObject>] {
+                    if let dShort = desc[0]["main"] as? String {
+                        self._descShort = dShort
+                    }
+                    
+                }
+                
+                if self._descShort == "Rain" {
+                    self.weatherImgName = self._descShort
+                } else if self._descShort == "Sunny" {
+                    self.weatherImgName = self._descShort
+                } else if self._descShort == "Clear" {
+                    self.weatherImgName = self._descShort
+                } else if self._descShort == "Clouds" {
+                    self.weatherImgName = self._descShort
+                } else {
+                    self.weatherImgName = "Default"
                 }
                 
             }
