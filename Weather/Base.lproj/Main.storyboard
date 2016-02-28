@@ -20,16 +20,44 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="kzG-rg-Ivw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvB-cf-wvx">
+                                <rect key="frame" x="182" y="405" width="237" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="QsK-y7-YDG"/>
+                                    <constraint firstAttribute="width" constant="237" id="Rdx-TI-CJz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="117"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RY6-qH-d1e">
+                                <rect key="frame" x="97" y="352" width="387" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Hp3-sB-hxS"/>
+                                    <constraint firstAttribute="width" constant="387" id="gCl-ip-33M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YvB-cf-wvx" secondAttribute="bottom" constant="73" id="IlV-ga-iRC"/>
+                            <constraint firstItem="YvB-cf-wvx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JyB-KP-UfQ"/>
+                            <constraint firstItem="RY6-qH-d1e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OA3-zG-jhE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kzG-rg-Ivw" secondAttribute="bottom" id="Ol6-MI-aW2"/>
                             <constraint firstAttribute="trailing" secondItem="kzG-rg-Ivw" secondAttribute="trailing" id="W2I-Kc-aeQ"/>
                             <constraint firstItem="kzG-rg-Ivw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iZ0-Mi-XrF"/>
                             <constraint firstItem="kzG-rg-Ivw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qCj-GC-Ik3"/>
+                            <constraint firstItem="YvB-cf-wvx" firstAttribute="top" secondItem="RY6-qH-d1e" secondAttribute="bottom" constant="32" id="sTf-j6-2dv"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="RY6-qH-d1e" id="gUq-xt-ilQ"/>
+                        <outlet property="temperatureLabel" destination="YvB-cf-wvx" id="Apy-8D-dnI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
