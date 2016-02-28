@@ -35,8 +35,10 @@ class Weather {
     func downloadWeatherData(completed: DownloadComplete) {
         print("I am downloading now")
         let url = NSURL(string: self._weatherURL)!
+        print("My URL is: \(url)")
         
         Alamofire.request(.GET, url).responseJSON { response in
+            print("I am in Alamo")
             let result = response.result
             
             if let dict = result.value as? Dictionary<String, AnyObject> {

@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Alamofire
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -23,6 +24,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var currentLocation: CLLocation!
     var currentCity: String!
     var weather: Weather!
+    var name: String!
     
     
     // MARK: Methods & Actions
@@ -38,9 +40,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             // City
             if let city = placeMark.addressDictionary!["City"] as? NSString {
                 self.currentCity = "\(city)"
-                print("Just got city name")
-                self.weather = Weather(location: "\(self.currentCity)")
-                print("Created weather object")
+                print("Just got city name, it is: \(self.currentCity)")
+                
+                self.name = self.currentCity.stringByReplacingOccurrencesOfString("City of ", withString: "")
+                let finalCityName = self.name.lowercaseString
+                self.name = finalCityName
+                
+                self.weather = Weather(location: "\(self.name)")
+                print("Before getting to API, city name is: \(self.name)")
                 self.weather.downloadWeatherData { () -> () in
                     self.updateUI()
                 }
@@ -52,7 +59,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func updateUI() {
         print("I'm inside of updateUI")
-        cityLabel.text = currentCity
+        cityLabel.text = name.capitalizedString
         temperatureLabel.text = weather.temperature
     }
     
